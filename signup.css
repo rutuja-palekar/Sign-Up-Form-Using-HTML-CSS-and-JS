@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+
+body {
+    background-color: hsl(0, 100%, 74%);
+    font-family: 'Poppins', sans-serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    height: 40rem;
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 0.6rem;
+}
+
+div {
+    margin-top: 1rem;
+}
+
+h1 {
+    width: 30rem;
+    background-color: hsl(248, 32%, 49%);
+    border-radius: 0.6rem;
+    text-align: center;
+    font-size: 1.6rem;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    padding: 0.5rem 0rem 0.5rem 0rem;
+    color: white;
+}
+
+input {
+    font-size: 1.09rem;
+    font-family: 'Lora', serif;
+    padding: 0.9rem;
+    border: 0.1rem solid;
+    border-radius: 0.5rem;
+    padding-right: 13rem;
+}
+
+input::placeholder {
+    font-size: 1rem;
+}
+
+input:focus {
+    border: 2px solid hsl(154, 59%, 51%);
+    outline: none;
+}
+
+span {
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: "Lora", "serif";
+    color: red;
+}
+
+.errorMessage {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.button input {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: 0.1rem solid transparent;
+    border-radius: 0.5rem;
+    padding: 0.9rem 10.3rem 0.9rem 11rem;
+    background-color: #7286D3;
+    color: black;
+}
+
+.button input:hover {
+    background-color: #3CCF4E;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
