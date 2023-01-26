@@ -12,7 +12,7 @@
 
 <body>
     <div class="container">
-        <form action="" name="signUpForm" onsubmit="return onSignUp()">
+        <form action="./login.html" name="signUpForm" onsubmit="return onSignUp()">
             <h1>Sign Up</h1>
             <main>
                 <div class="errorMessage">
@@ -41,10 +41,12 @@
                 </div>
 
                 <div class="button">
-                    <input type="button" id="btnSignUp" value="Register" onsubmit="return onSignUp()">
+                    <input type="submit" id="btnSignUp" value="Register" onsubmit="return onSignUp()">
                 </div>
+                <a href="./login.html">Login</a>
             </main>
         </form>
+        
     </div>
     <script src="signup.js"></script>
 </body>

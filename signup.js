@@ -20,20 +20,44 @@ function onSignUp() {
         const lastName = txtLastName.value;
         const emailId = txtEmailId.value;
         const password = txtPassword.value;
-        const coPassword = txtCoPassword.value;
 
         const user = {
             firstName: firstName,
             lastName: lastName,
             emailId: emailId,
-            password: password,
-            coPassword: coPassword
+            password: password
         }
-        users.push(user);
-        console.log(users);
+        if (checkDuplicate(emailId) === true) {
+            const userId = getUserId();
+            user.id = userId;
+            users.push(user);
+            sessionStorage.setItem('userData', JSON.stringify(users));
+        }
     }
 }
 
+function checkDuplicate(emailId) {
+    const data = users.filter(user => user.emailId === emailId);
+    if (data && data.length > 0) {
+        alert('User Already Exists!');
+        return false;
+    }
+    return true;
+}
+
+function getUserId() {
+    const lastUserId = sessionStorage.getItem('lastUserId');
+
+    let userId;
+    if (lastUserId === null) {
+        userId = 1;
+        sessionStorage.setItem('lastUserId', userId);
+        return userId;
+    }
+    userId = parseInt(lastUserId) + 1;
+    sessionStorage.setItem('lastUserId', userId);
+    return userId;
+}
 function validateFirstNameC1() {
     var namePattern = /^[a-zA-Z]*$/;
     var returnValue = true;
