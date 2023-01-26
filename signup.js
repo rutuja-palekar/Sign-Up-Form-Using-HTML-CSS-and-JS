@@ -35,7 +35,7 @@ function onSignUp() {
 }
 
 function validateFirstNameC1() {
-    var namePattern = /[a-zA-Z]/g;
+    var namePattern = /^[a-zA-Z]*$/;
     var returnValue = true;
 
     if (!namePattern.test(txtFirstName.value)) {
@@ -70,7 +70,7 @@ function validateFirstNameC1() {
 }
 
 function validateLastNameC1() {
-    var namePattern = /[a-zA-Z]/g;
+    var namePattern = /^[a-zA-Z]*$/;
     var returnValue = true;
 
     if (!namePattern.test(txtLastName.value)) {
